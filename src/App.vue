@@ -1,6 +1,5 @@
 <script>
 /*
-import { RouterLink, RouterView } from 'vue-router'
 import { ref, onMounted } from "vue";
 
 const headers = [
@@ -28,47 +27,13 @@ onMounted(() => {
 	})
 })
 */
-import TheHeader from './components/TheHeader.vue'
-import TheHero from './components/TheHero.vue'
-import TheAbout from './components/TheAbout.vue'
-import TheProject from "./components/TheProject.vue";
-export default {
-	name: 'app',
-	data(){
-		return {
-			theme: 'dark',
-		}
-	},
-	components: {
-		TheProject,
-		TheHeader,
-		TheHero,
-		TheAbout
-	},
-	methods: {
-		toggleTheme(){
-			if(this.theme === 'dark')
-				this.theme = 'light'
-			else
-				this.theme = 'dark'
-		}
-	},
-}
-
 </script>
 
 <template>
-	<div class="app" :class="theme">
-		<!--
-			<button @click="toggleTheme">{{ theme }}</button>
-		-->
-		<TheHeader/>
-		<main>
-			<TheHero/>
-			<TheAbout/>
-			<TheProject/>
-		</main>
-	</div>
+	<RouterView />
+	<!--
+		<button @click="toggleTheme">{{ theme }}</button>
+	-->
 	<!--
 <main>
 		<article>

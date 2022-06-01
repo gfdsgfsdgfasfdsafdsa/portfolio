@@ -2,7 +2,7 @@
 </script>
 
 <template>
-	<div class="container">
+	<div class="container component" id="1">
 		<h2>About <span class="line"/></h2>
 		<div class="about">
 			<div class="info">
@@ -37,6 +37,7 @@
 							<li>React</li>
 							<li>NextJS</li>
 							<li>Django Rest Api</li>
+							<li>MySql</li>
 						</ul>
 					</div>
 				</div>
@@ -55,6 +56,7 @@
 
 <style scoped>
 h2{
+	font-size: 2.8rem;
 	margin-bottom: 5rem;
 	position: relative;
 }
@@ -103,6 +105,11 @@ img{
 	width: 100px;
 	height: 100px;
 	margin-left: 10px;
+}
+
+.container{
+	padding-top: 5rem;
+	margin-bottom: 15rem;
 }
 
 

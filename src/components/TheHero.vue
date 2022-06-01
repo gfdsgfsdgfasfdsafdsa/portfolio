@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-	<div class="container hero">
+	<div class="container hero component" id="0">
 		<div>
 			<Transition name="fade">
 				<div v-if="mounted" class="text-content">
@@ -44,6 +44,10 @@ export default {
 	opacity: 0;
 }
 
+.container{
+	margin-bottom: 10rem;
+}
+
 .my-img{
 	width: 300px;
 	height: 300px;
@@ -55,11 +59,20 @@ export default {
 		linear-gradient(to right, #48BFE4, #405CE2, #370B9B, #6C09AE, #EA237E) border-box;
 }
 
+h2{
+	font-size: 4rem;
+}
+
+.headline{
+	font-size: 2rem;
+}
+
 .hero{
-	height: 90vh;
+	height: 70vh;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding-top: 3rem;
 }
 .text-content{
 	/*

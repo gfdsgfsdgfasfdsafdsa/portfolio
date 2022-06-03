@@ -1,4 +1,9 @@
-<script setup>
+<script>
+export default {
+	props:{
+		color: '',
+	},
+};
 </script>
 
 <template>
@@ -63,11 +68,12 @@ h2{
 h2 .line{
 	width: 30px;
 	height: 10px;
-	background-color: #EDEDEE;
+	background-color: v-bind(color);
 	position: absolute;
 	top: 55px;
 	left: 0;
 }
+
 .about .info, .technologies{
 	display: flex;
 	align-items: start;

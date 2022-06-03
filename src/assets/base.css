@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root{
-    --bgDark: #202023;
-    --colorDark: #EDEDEE;
+    --bgDark: #181818;
+    --colorDark: #FFFFFF;
+    --colorLight: #353535;
+    --bgLight: #FFFFFF;
+    --accentColor: #0051ff;
 }
 
 *{
@@ -11,15 +14,22 @@
     padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
 }
 
-.app{
-    background: white;
-    color: black;
-    font-size: 30px;
+.bg-transition{
     transition: background 0.3s ease-in-out;
+}
+
+.app{
+    background: var(--bgLight);
+    color: var(--colorLight);
+    font-size: 30px;
 }
 
 .dark {
@@ -45,9 +55,21 @@ button{
     font-size: .9rem;
 }
 
+/* custom styles */
+
 .container{
     margin: 0 auto;
     padding: 0 30px;
+}
+
+/*Transition*/
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s linear;
+}
+.fade-enter-from,
+.fade-leave-to{
+    opacity: 0;
 }
 
 /* Small */

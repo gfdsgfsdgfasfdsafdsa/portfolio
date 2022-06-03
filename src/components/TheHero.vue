@@ -1,8 +1,11 @@
 <script>
 export default {
+	props:{
+		bgColor: '',
+		color: '',
+	},
 	data() {
 		return {
-			userTheme: "light-theme",
 			mounted: false,
 		};
 	},
@@ -13,37 +16,28 @@ export default {
 </script>
 
 <template>
-	<div class="container hero component" id="0">
-		<div>
-			<Transition name="fade">
-				<div v-if="mounted" class="text-content">
-					<div class="intro">Hello, I am</div>
-					<h2>Romar Desabille</h2>
-					<div class="headline">Aspiring Web Developer.</div>
+	<div class="component" id="0">
+		<Transition name="fade">
+			<div v-if="mounted">
+				<div class="container hero">
+					<div>
+						<div class="intro">Hello, I am</div>
+						<h2 style="line-height: 1.2">Romar Desabille</h2>
+						<div class="headline">Aspiring Web Developer.</div>
+						<button class="resume-btn">
+							Resume.pdf
+						</button>
+					</div>
+					<div class="my-img-container">
+						<img src="../assets/images/my-image.jpg" alt="my image" class="my-img">
+					</div>
 				</div>
-			</Transition>
-			<button class="resume-btn">
-				Resume.pdf
-			</button>
-		</div>
-		<div class="my-img-container">
-			<img src="../assets/images/my-image.jpg" alt="my image" class="my-img">
-		</div>
+			</div>
+		</Transition>
 	</div>
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-	transition: margin-top .4s, opacity .4s linear;
-}
-
-.fade-enter-from,
-.fade-leave-to{
-	margin-top: -80px;
-	opacity: 0;
-}
-
 .container{
 	margin-bottom: 10rem;
 }
@@ -55,8 +49,8 @@ export default {
 	padding: .4rem;
 	border-radius: 50%;
 	background:
-		linear-gradient(#202023, #202023) padding-box,
-		linear-gradient(to right, #48BFE4, #405CE2, #370B9B, #6C09AE, #EA237E) border-box;
+		linear-gradient(v-bind(bgColor), v-bind(bgColor)) padding-box,
+		linear-gradient(to right, var(--accentColor), v-bind(color)) border-box;
 }
 
 h2{
@@ -68,17 +62,13 @@ h2{
 }
 
 .hero{
-	height: 70vh;
+	height: 80vh;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding-top: 3rem;
 }
-.text-content{
-	/*
-	margin-top: 200px;
-	*/
-}
+
 .intro{
 	font-size: 1.3rem;
 }
@@ -87,7 +77,16 @@ h2{
 	margin-top: 15px;
 	font-size: .9rem;
 	font-weight: 500;
-	padding: 10px 20px;
+	padding: 12px 30px;
+	background-color: unset;
+	color: var(--accentColor);
+	border: 1px solid var(--accentColor);
+	border-radius: 5px;
+	transition: background .3s linear;
+}
+.resume-btn:hover{
+	background-color: var(--accentColor);
+	color: #fff;
 }
 
 </style>

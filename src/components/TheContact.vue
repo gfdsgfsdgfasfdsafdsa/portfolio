@@ -31,7 +31,8 @@ p{
 }
 
 .email-link{
-	border: 1px solid #fff;
+	border: 1px solid var(--accentColor);
+	color: var(--accentColor);
 	font-size: 1rem;
 	padding: 10px 25px;
 	border-radius: 7px;
@@ -39,7 +40,8 @@ p{
 }
 
 .email-link:hover{
-	background-color: #181818;
+	background-color: var(--accentColor);
+	color: #fff;
 }
 
 .container{

@@ -1,61 +1,55 @@
-<script>
+<script setup>
 import TheHeader from '../components/TheHeader.vue'
 import TheHero from '../components/TheHero.vue'
 import TheAbout from '../components/TheAbout.vue'
 import TheProject from '../components/TheProject.vue';
 import TheContact from '../components/TheContact.vue';
-import {ref} from "vue";
+import { ref, onMounted } from "vue";
+import { useThemeStore } from "../stores/theme";
 
-//const currentSection = ref('home')
-export default {
-	name: 'Home',
-	data(){
-		return {
-			theme: 'dark',
-			currentSection: '0'
-		}
-	},
-	components: {
-		TheHeader,
-		TheHero,
-		TheAbout,
-		TheProject,
-		TheContact,
-	},
-	methods: {
-		toggleTheme(){
-			if(this.theme === 'dark')
-				this.theme = 'light'
-			else
-				this.theme = 'dark'
-		}
-	},
-	mounted() {
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if(entry.intersectionRatio > 0){
-					this.currentSection = entry.target.getAttribute('id')
-				}
-			})
-		}, {
-			rootMargin: '0px 0px -85% 0px',
+const themeStore = useThemeStore()
+const currentSection = ref('0')
+const pageMounted = ref(false)
+
+onMounted(() => {
+	pageMounted.value = true
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if(entry.intersectionRatio > 0){
+				currentSection.value = entry.target.getAttribute('id')
+			}
 		})
-		const elements = document.getElementsByClassName('component')
-		for(let i = 0; i < elements.length; i++){
-			observer.observe(elements[i])
-		}
-	},
-}
+	}, {
+		rootMargin: '0px 0px -85% 0px',
+	})
+	const elements = document.getElementsByClassName('component')
+	for(let i = 0; i < elements.length; i++){
+		observer.observe(elements[i])
+	}
+})
 </script>
 
 <template>
-	<div :class="theme">
+	<div :class="themeStore.currentTheme" class="app bg-transition">
 		<div id="h"/>
-		<TheHeader :active-link="currentSection"/>
+		<TheHeader
+			:current-section="currentSection"
+			:switch-theme-f="themeStore.switchTheme"
+			:bg-color="themeStore.bgColor"
+			:color="themeStore.color"
+			:theme="themeStore.currentTheme"
+		/>
 		<main>
-			<TheHero/>
-			<TheAbout/>
-			<TheProject/>
+			<TheHero
+				:bg-color="themeStore.bgColor"
+				:color="themeStore.color"
+			/>
+			<TheAbout
+				:color="themeStore.color"
+			/>
+			<TheProject
+				:color="themeStore.color"
+			/>
 			<TheContact/>
 		</main>
 	</div>

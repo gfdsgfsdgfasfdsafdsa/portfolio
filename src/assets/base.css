@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+body::-webkit-scrollbar {
+    width: 15px /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: var(--bgDark) /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--accentColor); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 4px solid var(--bgDark); /* creates padding around scroll thumb */
+}
+
 :root{
     --bgDark: #181818;
     --colorDark: #FFFFFF;
@@ -56,20 +68,9 @@ button{
 }
 
 /* custom styles */
-
 .container{
     margin: 0 auto;
     padding: 0 30px;
-}
-
-/*Transition*/
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 1s linear;
-}
-.fade-enter-from,
-.fade-leave-to{
-    opacity: 0;
 }
 
 /* Small */
@@ -95,4 +96,14 @@ button{
     .container {
         width: 1140px;
     }
+}
+
+/*Transition*/
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s linear;
+}
+.fade-enter-from,
+.fade-leave-to{
+    opacity: 0;
 }

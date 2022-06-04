@@ -42,6 +42,7 @@ export default {
 							<li>React</li>
 							<li>NextJS</li>
 							<li>Django Rest Api</li>
+							<li>Vue</li>
 							<li>MySql</li>
 						</ul>
 					</div>
@@ -51,7 +52,12 @@ export default {
 				<h3>Experience</h3>
 				<ul>
 					<li>
-						Lorem ipsum
+						<div>
+							Intern at VirtualDesk (Aug. 16, 2021 - Oct. 19, 2021) - Wordpress Developer
+						</div>
+						<div>
+							112 Lapu-lapu St. Agdao Davao City, Philippines 8000
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -65,7 +71,7 @@ h2{
 	margin-bottom: 5rem;
 	position: relative;
 }
-h2 .line{
+.line{
 	width: 30px;
 	height: 10px;
 	background-color: v-bind(color);
@@ -122,6 +128,33 @@ img{
 @media screen and (min-width: 1200px) {
 	.container {
 		width: 1000px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	h2{
+		font-size: 2rem;
+	}
+	h2 .line{
+		top: 44px;
+		left: 0;
+	}
+	.about .info, .technologies{
+		display: flex;
+		flex-direction: column;
+	}
+	.about .info p, .about .info ul, .technologies .main{
+		font-size: 1rem;
+		margin: 1rem 0 0 1.5rem;
+	}
+	.about .info h3{
+		font-size: 1.2rem;
+	}
+	.technologies h3{
+		font-size: 1rem;
+	}
+	.technologies{
+		margin-top: .3rem;
 	}
 }
 </style>

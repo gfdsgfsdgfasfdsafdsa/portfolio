@@ -24,12 +24,12 @@ export default {
 						<div class="intro">Hello, I am</div>
 						<h2 style="line-height: 1.2">Romar Desabille</h2>
 						<div class="headline">Aspiring Web Developer.</div>
-						<button class="resume-btn">
+						<a class="resume-btn" href="/resume.pdf" target="_blank">
 							Resume.pdf
-						</button>
+						</a>
 					</div>
 					<div class="my-img-container">
-						<img src="../assets/images/my-image.jpg" alt="my image" class="my-img">
+						<img src="../assets/images/my-image.png" alt="my image" class="my-img">
 					</div>
 				</div>
 			</div>
@@ -89,4 +89,29 @@ h2{
 	color: #fff;
 }
 
+@media only screen and (max-width: 768px) {
+	.hero{
+		height: unset;
+		display: block;
+	}
+	h2{
+		font-size: 2rem;
+	}
+	.headline{
+		font-size: 1.3rem;
+	}
+	.my-img-container{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 4rem;
+	}
+	.my-img{
+		width: 14rem;
+		height: 14rem;
+	}
+	.resume-btn{
+		padding: 10px 25px;
+	}
+}
 </style>

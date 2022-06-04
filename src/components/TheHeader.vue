@@ -33,9 +33,9 @@ export default {
 <template>
 	<header class="container bg-transition">
 		<nav class="navbar">
-			<a href="#" class="nav-logo">Ro.</a>
+			<a href="#" class="nav-logo">&#10094;Ro /&#10095;</a>
 			<div style="display: flex">
-				<div class="nav-overlay" ref="navOverlay"/>
+				<div class="nav-overlay" ref="navOverlay" @click="mobileMenu"/>
 				<ul class="nav-menu" ref="navMenu">
 					<li v-for="(link, index) in links" class="nav-item">
 						<a :href="`#${link === 'Home' ? 'h' : index}`"
@@ -57,7 +57,8 @@ export default {
 						class="change-theme-icon-btn">
 						<span v-if="theme === 'light'">
 							<svg
-								style="fill: #000000"
+								class="theme-icon"
+								:fill="`${color}`"
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
 								width="30"
@@ -67,7 +68,8 @@ export default {
 						</span>
 						<span v-else>
 							<svg
-								style="fill: #FFFFFF"
+								class="theme-icon"
+								:fill="`${color}`"
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
 								width="30"
@@ -87,7 +89,7 @@ header{
 	position: sticky;
 	top: 0;
 	background-color: v-bind(bgColor);
-	z-index: 1;
+	z-index: 2;
 }
 
 .change-theme-icon-btn{
@@ -95,8 +97,10 @@ header{
 	background: none;
 	display: flex;
 	align-items: center;
-	margin-top: .9rem;
 	margin-left: .8rem;
+}
+.theme-icon{
+	margin-top: .9rem;
 }
 
 .mobile-menu{
@@ -121,7 +125,7 @@ header{
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #fff;
+    background-color: v-bind(color);
 }
 
 .nav-menu {
@@ -158,23 +162,24 @@ header{
 		position: fixed;
 		right: -100%;
 		top: 4.7rem;
-		background-color: var(--bgDark);
+		background-color: v-bind(bgColor);
 		display: inline;
 		width: 60%;
 		text-align: center;
 		transition: 0.3s;
-		box-shadow:
-			0 10px 27px rgba(0, 0, 0, 0.05);
+		box-shadow: -3px 0 2px 0 v-bind(color);
 		height: 90vh;
 	}
 
 	.nav-overlay{
 		width: 100%;
 		opacity: 0;
-		right: 0;
+		transition: 0s;
+		box-shadow: 0 0 0 0;
 	}
 	.nav-overlay.active{
-		opacity: 0.3;
+		right: 0;
+		opacity: 0.4;
 	}
 
 	.nav-menu.active{
@@ -189,7 +194,7 @@ header{
 	}
 
 	.nav-link:hover, .nav-link.active{
-		color: blue;
+		color: var(--accentColor);
 		background-color: unset;
 	}
 
@@ -210,7 +215,7 @@ header{
         transform: translateY(-8px) rotate(-45deg);
     }
 
-	.light-theme-icon{
+	.theme-icon{
 		margin-top: 0;
 		margin-right: 20px;
 	}

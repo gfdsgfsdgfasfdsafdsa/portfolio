@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/HomeView.vue'
 import Projects from '../views/Projects.vue'
-import NotFound from '../views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,9 +16,14 @@ const router = createRouter({
       component: Projects
     },
     {
+      path: '/screenshots/:id',
+      name: 'screenshots',
+      component: () => import('../views/Screenshots.vue'),
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'notfound',
-      component: NotFound,
+      component: () => import('../views/NotFound.vue'),
     }
   ]
 })

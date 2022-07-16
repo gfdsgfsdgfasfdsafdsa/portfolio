@@ -14,8 +14,13 @@ export default {
 				<h5 class="title">{{project.title}}</h5>
 				<p class="description">{{project.description}}</p>
 				<div class="technologies-used">{{project.used}}</div>
+				<div class="screenshots">
+					<a :href="`/screenshots/${i}`" target="_blank">
+						Screenshots
+					</a>
+				</div>
 				<div class="links">
-					<a :href="`${project.link}`" target="_blank" style="margin-right: 18px">
+					<a :href="`${project.link}`" target="_blank" style="margin-right: 18px" v-if="project.link">
 						<svg
 							class="icon-link"
 							xmlns="http://www.w3.org/2000/svg"
@@ -45,6 +50,22 @@ export default {
 </template>
 
 <style scoped>
+.right-items{
+
+}
+
+.screenshots{
+	margin-top: 1rem;
+	font-size: 1rem;
+}
+.screenshots a{
+	border-bottom: 1px solid v-bind(color);
+}
+.screenshots a:hover{
+	color: var(--accentColor);
+	border-bottom: 1px solid var(--accentColor);
+}
+
 .links{
 	margin-top: 10px;
 }
@@ -54,6 +75,7 @@ export default {
 
 .project{
 	display: flex;
+	justify-content: space-between;
 }
 .projects{
 	margin-top: 7rem;

@@ -5,10 +5,22 @@
 	<div class="container component" id="3">
 		<div>
 			<h2>Contact</h2>
-			<p>Thank you for visiting!</p>
+			<div class="account-links">
+				<a href="https://github.com/romar0001" target="_blank">
+					Github
+				</a>
+				•
+				<a href="https://www.facebook.com/romarrrrr/" target="_blank">
+					Facebook
+				</a>
+			</div>
+			<div style="font-size: 1.2rem">
+				Email: romardesabille@gmail.com
+			</div>
 			<div class="email-container">
 				<a class="email-link" href="mailto:romardesabille@gmail.com?Subject=Hello" target="_blank">Say Hello</a>
 			</div>
+			<p>Thank you for visiting!</p>
 		</div>
 	</div>
 </template>
@@ -28,6 +40,13 @@ p{
 .email-container{
 	display: flex;
 	justify-content: center;
+	margin: 4rem 0;
+}
+
+
+.account-links a{
+	color: var(--accentColor);
+	font-size: 1.3rem;
 }
 
 .email-link{
@@ -50,6 +69,7 @@ p{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 }
 
 @media screen and (min-width: 1200px) {

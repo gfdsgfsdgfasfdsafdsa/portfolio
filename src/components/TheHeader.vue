@@ -33,7 +33,7 @@ export default {
 <template>
 	<header class="container bg-transition">
 		<nav class="navbar">
-			<a href="#" class="nav-logo">&#10094;Ro /&#10095;</a>
+			<a href="#" class="nav-logo">&#10094;/&#10095;</a>
 			<div style="display: flex">
 				<div class="nav-overlay" ref="navOverlay" @click="mobileMenu"/>
 				<ul class="nav-menu" ref="navMenu">

@@ -120,7 +120,20 @@ img{
 	font-size: 1.5rem;
 	font-weight: 600;
 }
-
+@media screen and (max-width: 410px) {
+	.info{
+		margin: 5px;
+	}
+	.technologies-used{
+		margin-top: 5px;
+	}
+	.screenshots{
+		margin-top: 5px;
+	}
+	.links{
+		margin-top: 2px;
+	}
+}
 @media screen and (max-width: 768px) {
 	h2 {
 		font-size: 2rem;

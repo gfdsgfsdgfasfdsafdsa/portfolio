@@ -29,7 +29,7 @@ export default {
 						</a>
 					</div>
 					<div class="my-img-container">
-						<img src="../assets/images/my-image.png" alt="my image" class="my-img">
+						<img src="images/my-image.png" alt="my image" class="my-img">
 					</div>
 				</div>
 			</div>

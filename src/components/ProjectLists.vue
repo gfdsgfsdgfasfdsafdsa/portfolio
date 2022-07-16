@@ -125,6 +125,9 @@ img{
 	h2 {
 		font-size: 2rem;
 	}
+	.description{
+		display: none;
+	}
 }
 @media only screen and (max-width: 992px) {
 	.project{

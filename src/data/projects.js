@@ -25,7 +25,7 @@ const featured = [
 		used: 'PHP • MySQL • Javascript • Bootstrap • CSS',
 		link: null,
 		githubLink: 'https://github.com/romar0001/anime',
-		thumbnail: `${imgPath}/anime/1.PNG`
+		thumbnail: `${imgPath}/anime/1.png`
 	}
 ]
 

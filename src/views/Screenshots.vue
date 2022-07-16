@@ -72,7 +72,7 @@ p{
 }
 
 .app{
-	min-heigh: 100vh;
+	min-height: 100vh;
 }
 
 h1{

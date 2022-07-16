@@ -1,4 +1,4 @@
-const imgPath = '/src/assets/images/'
+const imgPath = '/images'
 
 const featured = [
 	{

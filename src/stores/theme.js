@@ -9,9 +9,9 @@ const theme = {
 	COLOR_LIGHT: '#353535',
 }
 function checkTheme(){
-	return localStorage.getItem('theme') === theme.DARK ?
-		[localStorage.getItem('theme'), theme.BG_DARK, theme.COLOR_DARK] :
-		['light', theme.BG_LIGHT, theme.COLOR_LIGHT]
+	return localStorage.getItem('theme') === theme.LIGHT ?
+		[localStorage.getItem('theme'), theme.BG_LIGHT, theme.COLOR_LIGHT] :
+		['dark', theme.BG_DARK, theme.COLOR_DARK]
 }
 export const useThemeStore = defineStore('theme',{
 	state: () => ({

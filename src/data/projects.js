@@ -7,7 +7,7 @@ const featured = [
 		used: 'Vue • CSS',
 		link: null,
 		githubLink: 'https://github.com/romar0001/portfolio',
-		thumbnail: `${imgPath}/portfolio/1.png`
+		thumbnail: `${imgPath}/portfolio/1.PNG`
 	},
 	{
 		title: 'Capstone Project',
@@ -15,7 +15,7 @@ const featured = [
 		used: 'NextJS • MUI • Django Rest API',
 		link: null,
 		githubLink: 'https://github.com/romar0001/capstone',
-		thumbnail: `${imgPath}/capstone/1.png`
+		thumbnail: `${imgPath}/capstone/1.PNG`
 	},
 	{
 		title: 'Anime Site',
@@ -25,7 +25,7 @@ const featured = [
 		used: 'PHP • MySQL • Javascript • Bootstrap • CSS',
 		link: null,
 		githubLink: 'https://github.com/romar0001/anime',
-		thumbnail: `${imgPath}/anime/1.png`
+		thumbnail: `${imgPath}/anime/1.PNG`
 	}
 ]
 
@@ -35,26 +35,26 @@ const projects = {
 		{
 			...featured[0],
 			screenshots: [
-				`${imgPath}/portfolio/2.png`,
-				`${imgPath}/portfolio/3.png`
+				`${imgPath}/portfolio/2.PNG`,
+				`${imgPath}/portfolio/3.PNG`
 			],
 		},
 		{
 			...featured[1],
 			screenshots: [
-				`${imgPath}/capstone/2.png`,
-				`${imgPath}/capstone/3.png`,
-				`${imgPath}/capstone/4.png`,
-				`${imgPath}/capstone/5.png`,
+				`${imgPath}/capstone/2.PNG`,
+				`${imgPath}/capstone/3.PNG`,
+				`${imgPath}/capstone/4.PNG`,
+				`${imgPath}/capstone/5.PNG`,
 			],
 		},
 		{
 			...featured[2],
 			screenshots: [
-				`${imgPath}/anime/5.png`,
-				`${imgPath}/anime/2.png`,
-				`${imgPath}/anime/3.png`,
-				`${imgPath}/anime/4.png`,
+				`${imgPath}/anime/5.PNG`,
+				`${imgPath}/anime/2.PNG`,
+				`${imgPath}/anime/3.PNG`,
+				`${imgPath}/anime/4.PNG`,
 			],
 		}
 	]

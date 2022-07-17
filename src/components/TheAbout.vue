@@ -29,6 +29,7 @@ export default {
 						<ul>
 							<li>HTML</li>
 							<li>CSS</li>
+							<li>Bootstrap</li>
 							<li>Javascript</li>
 							<li>PHP</li>
 							<li>Python</li>

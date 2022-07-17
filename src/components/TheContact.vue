@@ -9,13 +9,9 @@
 				<a href="https://github.com/romar0001" target="_blank">
 					Github
 				</a>
-				•
-				<a href="https://www.facebook.com/romarrrrr/" target="_blank">
-					Facebook
-				</a>
 			</div>
 			<div style="font-size: 1.2rem">
-				Email: romardesabille@gmail.com
+				romardesabille@gmail.com
 			</div>
 			<div class="email-container">
 				<a class="email-link" href="mailto:romardesabille@gmail.com?Subject=Hello" target="_blank">Say Hello</a>

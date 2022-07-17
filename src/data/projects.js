@@ -4,7 +4,7 @@ const featured = [
 	{
 		title: 'My Portfolio',
 		description: 'My First Portfolio Site',
-		used: 'Vue • CSS',
+		used: 'VueJS • CSS',
 		link: null,
 		githubLink: 'https://github.com/romar0001/portfolio',
 		thumbnail: `${imgPath}/portfolio/1.PNG`

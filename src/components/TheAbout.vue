@@ -13,8 +13,10 @@ export default {
 			<div class="info">
 				<h3>Background</h3>
 				<p>
-					I am Romar Desabille Graduating student of Bachelor of Science in Information Technology
-					in Holy Cross of Davao College.
+					I am a graduating student from Holy Cross of Davao College in the field
+					of Bachelor of Science in Information Technology. My objective is
+					to learn and gain experience while working with IT professionals. To be able to enhance my skills and competencies in web
+					development.
 				</p>
 			</div>
 			<div class="technologies">
@@ -33,11 +35,11 @@ export default {
 						</ul>
 						<ul>
 							<li>CodeIgniter</li>
-							<li>React</li>
+							<li>ReactJS</li>
 							<li>NextJS</li>
 							<li>Django Rest Api</li>
-							<li>Vue</li>
-							<li>MySql</li>
+							<li>VueJS</li>
+							<li>MySQL</li>
 						</ul>
 					</div>
 				</div>

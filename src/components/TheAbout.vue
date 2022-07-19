@@ -14,9 +14,7 @@ export default {
 				<h3>Background</h3>
 				<p>
 					I am a graduating student from Holy Cross of Davao College in the field
-					of Bachelor of Science in Information Technology. My objective is
-					to learn and gain experience while working with IT professionals. To be able to enhance my skills and competencies in web
-					development.
+					of Bachelor of Science in Information Technology.
 				</p>
 			</div>
 			<div class="technologies">

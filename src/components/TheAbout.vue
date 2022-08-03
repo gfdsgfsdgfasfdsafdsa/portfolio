@@ -30,7 +30,6 @@ export default {
 							<li>Bootstrap</li>
 							<li>Javascript</li>
 							<li>PHP</li>
-							<li>Python</li>
 						</ul>
 						<ul>
 							<li>CodeIgniter</li>

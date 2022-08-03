@@ -13,7 +13,7 @@ export default {
 			<div class="info">
 				<h3>Background</h3>
 				<p>
-					I am a graduating student from Holy Cross of Davao College in the field
+					I am a fresh graduate student in Holy Cross of Davao College in the field
 					of Bachelor of Science in Information Technology.
 				</p>
 			</div>
@@ -92,6 +92,7 @@ h2{
 .technologies{
 	margin-top: 2rem;
 	font-size: 1rem;
+	margin-left: 1rem;
 }
 
 .technologies .list{
@@ -150,6 +151,7 @@ img{
 	}
 	.technologies{
 		margin-top: .3rem;
+		margin-left: 0;
 	}
 }
 </style>

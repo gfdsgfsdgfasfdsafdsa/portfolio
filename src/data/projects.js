@@ -19,9 +19,7 @@ const featured = [
 	},
 	{
 		title: 'Anime Site',
-		description: 'My 3rd year project. A person can view anime videos using the site.' +
-			'The videos are saved in the google drive and the admin will need to add ' +
-			'the link though the site.',
+		description: 'My 3rd year project.',
 		used: 'PHP • MySQL • Javascript • Bootstrap • CSS',
 		link: null,
 		githubLink: 'https://github.com/romar0001/anime',
